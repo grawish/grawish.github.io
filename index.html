@@ -3,57 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <title>Grawish Sachdeva</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css"/>
     <script src="script.js" defer></script>
 </head>
 <body>
-<div class="top-bar">
-    <div class="panel-left">
-        <div class="icon start-icon">
-        </div>
-        <div class="separator">
-        </div>
-        <div class="icon minimize-all">
+<div id="root">
+    <div class="top-bar">
+        <div class="panel-left">
+            <div class="icon start-icon">
+            </div>
+            <div class="separator">
+            </div>
+            <div class="icon minimize-all">
 
-        </div>
-        <div class="icon files">
+            </div>
+            <div class="icon files">
 
-        </div>
-        <div class="icon xterm">
+            </div>
+            <div class="icon xterm">
 
+            </div>
+            <div class="separator">
+            </div>
         </div>
-        <div class="separator">
+        <div class="panel-right">
+            <div class="time">
+            </div>
+            <div class="icon network">
+            </div>
+            <div class="icon volume">
+
+            </div>
+            <div class="icon bell">
+
+            </div>
+            <div class="icon power">
+
+            </div>
+            <div class="separator">
+
+            </div>
+            <div class="icon lock">
+
+            </div>
+            <div class="icon logout">
+
+            </div>
         </div>
     </div>
-    <div class="panel-right">
-        <div class="time">
-        </div>
-        <div class="icon network">
-        </div>
-        <div class="icon volume">
+    <div class="desktop">
+        <div class="file-manager" draggable="true" id="file-manager">
+            <div class="titlebar">
+                <div class="titlebar-title">File Manager</div>
+                <div class="titlebar-btns">
+                    <div class="min-btn">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="max-btn">
+                        <i class="far fa-square"></i>
+                    </div>
+                    <div class="close-btn">
+                        <i class="far fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="window">
+                <div class="window-navigation">
+                    <div class="nav-btn back">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="nav-btn fwd">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="nav-btn up">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="nav-btn home">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="address-bar">
+                        <div class="addbar-left">
+                            <i class="fas fa-caret-left"></i>
+                        </div>
+                        <div class="addbar-mid">
 
-        </div>
-        <div class="icon bell">
+                        </div>
+                        <div class="addbar-right">
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="file-navigation-bar">
+                        <div class="fnb-title">
+                            Places
+                        </div>
+                        <div class="fnb-item">
+                            <div class="fnb-img home-notext"></div>
+                            <div class="fnb-text">Home</div>
+                        </div>
+                        <div class="fnb-item">
+                            <div class="fnb-img desktop-notext"></div>
+                            <div class="fnb-text">Desktop</div>
+                        </div>
+                        <div class="fnb-item">
+                            <div class="fnb-img documents-notext"></div>
+                            <div class="fnb-text">Documents</div>
+                        </div>
+                        <div class="fnb-item">
+                            <div class="fnb-img downloads-notext"></div>
+                            <div class="fnb-text">Downloads</div>
+                        </div>
+                        <div class="fnb-item">
+                            <div class="fnb-img music-notext"></div>
+                            <div class="fnb-text">Music</div>
+                        </div>
+                        <div class="fnb-item">
+                            <div class="fnb-img pictures-notext"></div>
+                            <div class="fnb-text">Pictures</div>
+                        </div>
+                        <div class="fnb-item">
+                            <div class="fnb-img videos-notext"></div>
+                            <div class="fnb-text">Videos</div>
+                        </div>
+                    </div>
+                    <div class="files-grid">
+                        <div class="file-icons desk"></div>
+                        <div class="file-icons down"></div>
+                        <div class="file-icons docu"></div>
+                        <div class="file-icons musi"></div>
+                        <div class="file-icons pict"></div>
+                        <div class="file-icons vide"></div>
+                    </div>
+                </div>
 
+            </div>
         </div>
-        <div class="icon power">
-
-        </div>
-        <div class="separator">
-
-        </div>
-        <div class="icon lock">
-
-        </div>
-        <div class="icon logout">
-
-        </div>
+        <div class="browser" draggable="true" id="browser"></div>
+        <div class="desktop-icon trash" id="trash-icon"></div>
+        <div class="desktop-icon fs" id="chrome"></div>
+        <div class="desktop-icon home" id="home"></div>
     </div>
-</div>
-<div class="desktop">
-    <div class="desktop-icon trash"></div>
-    <div class="desktop-icon fs"></div>
-    <div class="desktop-icon home"></div>
 </div>
 </body>
 </html>
