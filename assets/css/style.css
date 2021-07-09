@@ -2,11 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 #root {
     position: relative;
-    background-image: url("./assets/img/bg.png");
+    background-image: url("../img/bg.png");
     background-size: max(100vw, calc(100vh * 16 / 9)) max(100vh, calc(100vw * 9 / 16)); /*16/9*/
     height: 100vh;
     background-position: center;
@@ -68,43 +69,43 @@
 }
 
 .start-icon {
-    background-image: url("./assets/img/icons/start.png");
+    background-image: url("../img/icons/start.png");
 }
 
 .minimize-all {
-    background-image: url("./assets/img/icons/minimize.svg");
+    background-image: url("../img/icons/minimize.svg");
 }
 
 .files {
-    background-image: url("./assets/img/icons/system-file-manager.svg");
+    background-image: url("../img/icons/system-file-manager.svg");
 }
 
 .xterm {
-    background-image: url("./assets/img/icons/utilities-terminal.svg");
+    background-image: url("../img/icons/utilities-terminal.svg");
 }
 
 .network {
-    background-image: url("./assets/img/icons/network-wired.svg");
+    background-image: url("../img/icons/network-wired.svg");
 }
 
 .volume {
-    background-image: url("./assets/img/icons/audio-volume-high.svg");
+    background-image: url("../img/icons/audio-volume-high.svg");
 }
 
 .bell {
-    background-image: url("./assets/img/icons/bell.svg");
+    background-image: url("../img/icons/bell.svg");
 }
 
 .power {
-    background-image: url("./assets/img/icons/gnome-power-manager-symbolic.svg");
+    background-image: url("../img/icons/gnome-power-manager-symbolic.svg");
 }
 
 .lock {
-    background-image: url("./assets/img/icons/lock.svg");
+    background-image: url("../img/icons/lock.svg");
 }
 
 .logout {
-    background-image: url("./assets/img/icons/logout.svg");
+    background-image: url("../img/icons/logout.svg");
 }
 
 .desktop {
@@ -129,15 +130,15 @@
 }
 
 .trash {
-    background-image: url("./assets/img/icons/trash.svg");
+    background-image: url("../img/icons/trash.svg");
 }
 
 .fs {
-    background-image: url("./assets/img/icons/fs.svg");
+    background-image: url("../img/icons/fs.svg");
 }
 
 .home {
-    background-image: url("./assets/img/icons/home.svg");
+    background-image: url("../img/icons/home.svg");
 }
 
 .file-icons:hover::after, .desktop-icon:hover::after {
@@ -168,6 +169,17 @@
     background: aqua;
     border-radius: 5px;
 }
+.terminal {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70vw;
+    height: 70vh;
+    background: #2c2c2c;
+    border-radius: 5px;
+}
 .active{
     display: flex;
 }
@@ -184,9 +196,14 @@
     justify-content: space-between;
     overflow: hidden;
 }
+.terminal .window{
+    display: block;
+    overflow: scroll;
+}
 .maximise{
     width: 100vw;
     height: 95vh;
+    /*position: absolute;*/
     top: 5vh;
     left: 0;
 }
@@ -288,25 +305,25 @@
     background-repeat: no-repeat;
 }
 .home-notext{
-    background-image: url("./assets/img/icons/folder_home.svg");
+    background-image: url("../img/icons/folder_home.svg");
 }
 .desktop-notext{
-    background-image: url("./assets/img/icons/folder-blue-desktop.svg");
+    background-image: url("../img/icons/folder-blue-desktop.svg");
 }
 .documents-notext{
-    background-image: url("./assets/img/icons/folder-blue-documents.svg");
+    background-image: url("../img/icons/folder-blue-documents.svg");
 }
 .downloads-notext{
-    background-image: url("./assets/img/icons/folder-blue-downloads.svg");
+    background-image: url("../img/icons/folder-blue-downloads.svg");
 }
 .music-notext{
-    background-image: url("./assets/img/icons/folder-blue-music.svg");
+    background-image: url("../img/icons/folder-blue-music.svg");
 }
 .pictures-notext{
-    background-image: url("./assets/img/icons/folder-blue-pictures.svg");
+    background-image: url("../img/icons/folder-blue-pictures.svg");
 }
 .videos-notext{
-    background-image: url("./assets/img/icons/folder-blue-video.svg");
+    background-image: url("../img/icons/folder-blue-video.svg");
 }
 .fnb-text{
     width: 80%;
@@ -336,20 +353,20 @@
     height: 80%;
 }
 .desk{
-    background-image: url("./assets/img/icons/Desktop.svg");
+    background-image: url("../img/icons/Desktop.svg");
 }
 .musi{
-    background-image: url("./assets/img/icons/Music.svg");
+    background-image: url("../img/icons/Music.svg");
 }
 .down{
-    background-image: url("./assets/img/icons/Downloads.svg");
+    background-image: url("../img/icons/Downloads.svg");
 }
 .vide{
-    background-image: url("./assets/img/icons/Videos.svg");
+    background-image: url("../img/icons/Videos.svg");
 }
 .pict{
-    background-image: url("./assets/img/icons/Pictures.svg");
+    background-image: url("../img/icons/Pictures.svg");
 }
 .docu{
-    background-image: url("./assets/img/icons/Documents.svg");
+    background-image: url("../img/icons/Documents.svg");
 }

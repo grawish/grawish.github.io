@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Grawish Sachdeva</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/termStyle.css"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css"/>
-    <script src="script.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/zterm.js" defer></script>
+    <script src="assets/js/cmdlist.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous" defer></script>
 </head>
 <body>
 <div id="root">
@@ -53,17 +58,17 @@
         </div>
     </div>
     <div class="desktop">
-        <div class="file-manager" draggable="true" id="file-manager">
+        <div class="file-manager" id="file-manager">
             <div class="titlebar">
                 <div class="titlebar-title">File Manager</div>
                 <div class="titlebar-btns">
                     <div class="min-btn">
                         <i class="fas fa-minus"></i>
                     </div>
-                    <div class="max-btn">
+                    <div class="max-btn" onclick="maxfm()">
                         <i class="far fa-square"></i>
                     </div>
-                    <div class="close-btn">
+                    <div class="close-btn" onclick="closefm()">
                         <i class="far fa-times"></i>
                     </div>
                 </div>
@@ -140,7 +145,33 @@
 
             </div>
         </div>
-        <div class="browser" draggable="true" id="browser"></div>
+        <div class="browser" id="browser"></div>
+        <div class="terminal" id="terminal" onclick="document.getElementById('termInput').focus()">
+            <div class="titlebar">
+                <div class="titlebar-title">File Manager</div>
+                <div class="titlebar-btns">
+                    <div class="min-btn">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="max-btn" onclick="maxfm()">
+                        <i class="far fa-square"></i>
+                    </div>
+                    <div class="close-btn" onclick="closefm()">
+                        <i class="far fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="window">
+                <p>Welcome to zTerminal 0.2</p>
+                <p>A simple terminal simulator for websites.</p>
+                <p>It is very much a work in progress, started on 2017-5-04. Type in help to see basic commands.</p><br>
+                <ol id="terminalDisp">
+                </ol>
+                <br>
+                <br>
+                <p>zTerminal@localhost:~ <input type='text' id='termInput' value=''></p>
+            </div>
+        </div>
         <div class="desktop-icon trash" id="trash-icon"></div>
         <div class="desktop-icon fs" id="chrome"></div>
         <div class="desktop-icon home" id="home"></div>
