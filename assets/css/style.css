@@ -133,8 +133,8 @@
     background-image: url("../img/icons/trash.svg");
 }
 
-.fs {
-    background-image: url("../img/icons/fs.svg");
+.chrome {
+    background-image: url("../img/icons/chrome.svg");
 }
 
 .home {
@@ -159,16 +159,18 @@
     background: #2c2c2c;
     border-radius: 5px;
 }
+
 .browser {
     display: none;
     position: absolute;
-    top: 15%;
-    left: 15%;
+    top: 10%;
+    left: 10%;
     width: 70vw;
     height: 70vh;
-    background: aqua;
+    background: #434343;
     border-radius: 5px;
 }
+
 .terminal {
     display: none;
     flex-direction: column;
@@ -180,10 +182,12 @@
     background: #2c2c2c;
     border-radius: 5px;
 }
-.active{
+
+.active {
     display: flex;
 }
-.window{
+
+.window {
     position: absolute;
     width: 99%;
     height: 94%;
@@ -196,18 +200,21 @@
     justify-content: space-between;
     overflow: hidden;
 }
-.terminal .window{
+
+.terminal .window {
     display: block;
     overflow: scroll;
 }
-.maximise{
+
+.maximise {
     width: 100vw;
     height: 95vh;
     /*position: absolute;*/
     top: 5vh;
     left: 0;
 }
-.titlebar{
+
+.titlebar {
     color: white;
     display: flex;
     justify-content: space-between;
@@ -217,18 +224,21 @@
     padding-left: 1vw;
     padding-right: 1vw;
 }
-.titlebar-title{
+
+.titlebar-title {
     font-size: 80%;
     width: 95%;
 }
-.titlebar-btns{
+
+.titlebar-btns {
     display: flex;
     font-size: 70%;
     justify-content: space-between;
     color: white;
     width: 5%;
 }
-.window-navigation{
+
+.window-navigation {
     position: relative;
     height: 6%;
     color: white;
@@ -238,20 +248,23 @@
     align-items: center;
     z-index: 10;
 }
-.nav-btn{
+
+.nav-btn {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.address-bar{
+
+.address-bar {
     width: 88%;
     height: 100%;
     margin-top: 1vh;
     display: flex;
     align-items: center;
 }
-.addbar-left, .addbar-right{
+
+.addbar-left, .addbar-right {
     width: 2.5%;
     height: 95%;
     font-size: 80%;
@@ -261,23 +274,35 @@
     justify-content: center;
     align-items: center;
 }
-.addbar-left{
+
+.addbar-left {
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }
-.addbar-right{
+
+.addbar-right {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
-.addbar-mid{
+
+.addbar-mid {
     width: 95%;
     height: 95%;
     background-color: #313131;
 }
-.window-body{
+
+.browser .addbar-mid {
+    width: 100%;
+    height: 95%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.window-body {
     display: flex;
 }
-.file-navigation-bar{
+
+.file-navigation-bar {
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -285,47 +310,58 @@
     justify-content: flex-start;
     border-right: 1px solid rgba(0, 0, 0, 0.58);
 }
-.fnb-title{
+
+.fnb-title {
     font-weight: bold;
     font-size: 2.5vh;
     color: white;
 }
-.fnb-item{
+
+.fnb-item {
     display: flex;
     height: 5vh;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
-.fnb-img{
+
+.fnb-img {
     width: 20%;
     height: 100%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
-.home-notext{
+
+.home-notext {
     background-image: url("../img/icons/folder_home.svg");
 }
-.desktop-notext{
+
+.desktop-notext {
     background-image: url("../img/icons/folder-blue-desktop.svg");
 }
-.documents-notext{
+
+.documents-notext {
     background-image: url("../img/icons/folder-blue-documents.svg");
 }
-.downloads-notext{
+
+.downloads-notext {
     background-image: url("../img/icons/folder-blue-downloads.svg");
 }
-.music-notext{
+
+.music-notext {
     background-image: url("../img/icons/folder-blue-music.svg");
 }
-.pictures-notext{
+
+.pictures-notext {
     background-image: url("../img/icons/folder-blue-pictures.svg");
 }
-.videos-notext{
+
+.videos-notext {
     background-image: url("../img/icons/folder-blue-video.svg");
 }
-.fnb-text{
+
+.fnb-text {
     width: 80%;
     height: 100%;
     color: white;
@@ -334,39 +370,101 @@
     justify-content: flex-start;
     align-items: center;
 }
-.files-grid{
+
+.files-grid {
     height: 93%;
     width: 75%;
     display: grid;
-    grid-template-rows: repeat(6,15vh);
-    grid-template-columns: repeat(13,15vh);
+    grid-template-rows: repeat(6, 15vh);
+    grid-template-columns: repeat(13, 15vh);
     grid-gap: 1%;
     padding: 1%;
 }
-.files-grid div{
+
+.files-grid div {
 
 }
-.file-icons{
+
+.file-icons {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     height: 80%;
 }
-.desk{
+
+.desk {
     background-image: url("../img/icons/Desktop.svg");
 }
-.musi{
+
+.musi {
     background-image: url("../img/icons/Music.svg");
 }
-.down{
+
+.down {
     background-image: url("../img/icons/Downloads.svg");
 }
-.vide{
+
+.vide {
     background-image: url("../img/icons/Videos.svg");
 }
-.pict{
+
+.pict {
     background-image: url("../img/icons/Pictures.svg");
 }
-.docu{
+
+.docu {
     background-image: url("../img/icons/Documents.svg");
+}
+
+.browframe {
+    height: 90%;
+    width: 100%;
+}
+
+#browser-window {
+    width: 100%;
+    height: 100%;
+}
+
+#iframe-url {
+    background-color: #313131;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 1%;
+}
+
+.powermenu {
+    position: absolute;
+    top: 37.5vh;
+    left: 37.5vw;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 10px;
+    background: rgb(122, 122, 122);
+    background: radial-gradient(circle, rgba(122, 122, 122, 1) 0%, rgba(61, 61, 61, 1) 100%);
+}
+
+.poweroption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    color: white;
+}
+
+.restart {
+    background: rgb(76, 255, 143);
+    background: radial-gradient(circle, rgba(76, 255, 143, 1) 0%, rgba(0, 138, 33, 1) 100%);
+}
+
+.shutdown {
+    background: rgb(255, 104, 104);
+    background: radial-gradient(circle, rgba(255, 104, 104, 1) 0%, rgba(194, 0, 0, 1) 100%);
 }

@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <title>Grawish Sachdeva</title>
     <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="stylesheet" href="assets/css/termStyle.css"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css"/>
     <script src="assets/js/script.js" defer></script>
-    <script src="assets/js/zterm.js" defer></script>
-    <script src="assets/js/cmdlist.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
             integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous" defer></script>
 </head>
@@ -21,13 +18,10 @@
             <div class="separator">
             </div>
             <div class="icon minimize-all">
-
             </div>
             <div class="icon files">
-
             </div>
             <div class="icon xterm">
-
             </div>
             <div class="separator">
             </div>
@@ -38,22 +32,16 @@
             <div class="icon network">
             </div>
             <div class="icon volume">
-
             </div>
             <div class="icon bell">
-
             </div>
             <div class="icon power">
-
             </div>
             <div class="separator">
-
             </div>
             <div class="icon lock">
-
             </div>
-            <div class="icon logout">
-
+            <div class="icon logout" id="shutdown">
             </div>
         </div>
     </div>
@@ -65,10 +53,10 @@
                     <div class="min-btn">
                         <i class="fas fa-minus"></i>
                     </div>
-                    <div class="max-btn" onclick="maxfm()">
+                    <div class="max-btn" onclick="maxEle(document.getElementById('file-manager'))">
                         <i class="far fa-square"></i>
                     </div>
-                    <div class="close-btn" onclick="closefm()">
+                    <div class="close-btn" onclick="closeEle(document.getElementById('file-manager'))">
                         <i class="far fa-times"></i>
                     </div>
                 </div>
@@ -145,35 +133,59 @@
 
             </div>
         </div>
-        <div class="browser" id="browser"></div>
-        <div class="terminal" id="terminal" onclick="document.getElementById('termInput').focus()">
+        <div class="browser" id="browser">
             <div class="titlebar">
-                <div class="titlebar-title">File Manager</div>
+                <div class="titlebar-title">Firefox</div>
                 <div class="titlebar-btns">
                     <div class="min-btn">
                         <i class="fas fa-minus"></i>
                     </div>
-                    <div class="max-btn" onclick="maxfm()">
+                    <div class="max-btn" onclick="maxEle(document.getElementById('browser'))">
                         <i class="far fa-square"></i>
                     </div>
-                    <div class="close-btn" onclick="closefm()">
+                    <div class="close-btn" onclick="closeEle(document.getElementById('browser'))">
                         <i class="far fa-times"></i>
                     </div>
                 </div>
             </div>
             <div class="window">
-                <p>Welcome to zTerminal 0.2</p>
-                <p>A simple terminal simulator for websites.</p>
-                <p>It is very much a work in progress, started on 2017-5-04. Type in help to see basic commands.</p><br>
-                <ol id="terminalDisp">
-                </ol>
-                <br>
-                <br>
-                <p>zTerminal@localhost:~ <input type='text' id='termInput' value=''></p>
+                <div class="window-navigation">
+                    <div class="nav-btn back" onclick="browserBack()">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="nav-btn fwd" onclick="browserFwd()">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="nav-btn reload" onclick="browserReload()">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="nav-btn home" onclick="browserHome()">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="address-bar">
+                        <div class="addbar-mid">
+                            <input type="url" id="iframe-url" value="https://google.com" oninput="browserUrl()">
+                        </div>
+                    </div>
+                </div>
+                <div class="browframe">
+                    <iframe id="browser-window" src="https://google.com/webhp?igu=1" name="browser-window"
+                            frameborder="0">
+                        <p>Your Browser Does not support iframes.</p>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="powermenu" id="powermenu">
+            <div class="poweroption restart" onclick="restart()">
+                <i class="fas fa-sync"></i>
+            </div>
+            <div class="poweroption shutdown" onclick="poweroff()">
+                <i class="fas fa-power-off"></i>
             </div>
         </div>
         <div class="desktop-icon trash" id="trash-icon"></div>
-        <div class="desktop-icon fs" id="chrome"></div>
+        <div class="desktop-icon chrome" id="chrome"></div>
         <div class="desktop-icon home" id="home"></div>
     </div>
 </div>
