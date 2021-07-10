@@ -72,9 +72,10 @@ function browserUrl() {
 }
 
 function poweroff() {
-    window.close();
+    // window.open(""+location.toString() , '_self', '').close();
+    // window.close();
 }
 
 function restart() {
-    window.reload();
+    location.reload();
 }

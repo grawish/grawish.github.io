@@ -184,7 +184,7 @@
 }
 
 .active {
-    display: flex;
+    display: flex !important;
 }
 
 .window {
